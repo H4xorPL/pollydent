@@ -1,10 +1,7 @@
 package pollydent
 
 import (
-	"fmt"
 	"io"
-	"os/exec"
-	"strings"
 )
 
 type Request struct {
@@ -39,13 +36,4 @@ type MP3Wrapper struct {
 
 func (w *MP3Wrapper) Close() error {
 	return nil
-}
-
-func getToken() string {
-	cmd := exec.Command("gcloud", "auth", "application-default", "print-access-token")
-	out, err := cmd.Output()
-	if err != nil {
-		fmt.Println(err)
-	}
-	return strings.Split(string(out), "\r\n")[0]
 }

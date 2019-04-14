@@ -1,10 +1,9 @@
 package pollydent
 
 import (
-	"os"
-
 	"io"
 	"io/ioutil"
+	"os"
 
 	"gopkg.in/yaml.v2"
 )
@@ -20,9 +19,9 @@ type PollyConfig struct {
 
 func defaultConfig() *PollyConfig {
 	return &PollyConfig{
-		Region:   "us-west-2",
+		Region:   "eu-west-1",
 		Format:   "pcm",
-		Voice:    "Mizuki",
+		Voice:    "Joanna",
 		TextType: "ssml",
 		Speed:    100,
 	}
